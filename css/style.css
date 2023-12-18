@@ -1,0 +1,182 @@
+/* Task 1 */
+
+.task_1 {
+    width: 495px;
+    height: 208px;
+    background-color: #DDA0DD;
+    margin: 50px auto;
+    position: relative;
+}
+
+.task_1_button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    background-color: #DDA0DD;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 5px;
+    box-shadow: inset 2px 2px 5px #fff, 7px 7px 11px #000;
+    text-shadow: 5px 5px 5px black;
+}
+
+.task_1_button:active {
+    box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgb(255, 255, 255) -1px -1px 4px 1px inset;
+    text-shadow: none;
+}
+
+/* Task 2 */
+
+.card {
+    width: 200px;
+    margin: auto;
+
+}
+
+.card_image {
+    width: 100%;
+}
+
+.card-content {
+    padding: 2px 16px;
+    text-align: center;
+    color: #2B9551;
+    font-style: italic;
+}
+
+.card_image:hover {
+    transition-duration: 1s;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.card:hover {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    transition-duration: 1s;
+}
+
+
+/* Task 3 */
+
+.text_container {
+    width: 700px;
+    margin: 50px auto;
+}
+
+.text_container_p {
+    text-align: center;
+    font-size: 140px;
+    color: red;
+    letter-spacing: 20px;
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Task 4 */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-container {
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.spinner-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 20px solid red;
+    border-top-color: #3498db;
+    border-left-color: #5e118b;
+    animation: spin 1s linear infinite;
+}
+
+.spinner-container:hover .spinner-ring {
+    animation-play-state: paused;
+}
+
+.spinner-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: bold;
+    color: #1b7809;
+}
+
+/* Task 5 */
+
+.header {
+    background-color: #056462;
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px 260px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+li:hover {
+    text-shadow: #ff00f0 1px 0 10px;
+}
+
+/* Task 6 */
+
+.loader {
+    margin: 50px auto;
+    width: 800px;
+    height: 22px;
+    border-radius: 20px;
+    color: #000000;
+    border: 1px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader .progress {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 6s linear forwards;
+}
+
+@keyframes l6 {
+    100% {
+        width: 100%;
+    }
+}
